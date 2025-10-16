@@ -7,7 +7,7 @@
     "build": "hugo --minify",
     "build:dev": "hugo -D",
     "preview": "hugo server --bind 0.0.0.0 --port 1313",
-    "clean": "rm -rf public resources"
+    "clean": "rm -rf docs resources"
   },
   "keywords": ["hugo", "static-site", "music", "presskit", "techno", "electronic"],
   "author": "Silent Souls",

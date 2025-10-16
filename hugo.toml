@@ -2,6 +2,7 @@ baseURL = "https://your-username.github.io/presskitss"
 languageCode = "en-us"
 title = "Silent Souls - Electronic Music Duo"
 theme = "silentsouls"
+publishDir = "docs"
 
 [params]
   description = "Silent Souls - DJ and Producer Duo specializing in Techno, Psytechno, and Melodic Techno"
