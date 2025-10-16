@@ -5,7 +5,7 @@ theme = "silentsouls"
 publishDir = "docs"
 
 [params]
-  description = "Silent Souls - DJ and Producer Duo specializing in Techno, Psytechno, and Melodic Techno"
+  description = "Silent Souls - Techno project from Madeira Island, formed by Leo Oliveira and Carlos Azevedo (aka Zen). Peak-time techno with hypnotic and psychedelic influences."
   author = "Silent Souls"
 
   [params.analytics]
