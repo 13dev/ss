@@ -1,0 +1,19 @@
+{
+  "name": "silent-souls-presskit",
+  "version": "1.0.0",
+  "description": "Silent Souls - Electronic Music Duo Presskit Website",
+  "scripts": {
+    "dev": "hugo server -D --bind 0.0.0.0 --port 1313",
+    "build": "hugo --minify",
+    "build:dev": "hugo -D",
+    "preview": "hugo server --bind 0.0.0.0 --port 1313",
+    "clean": "rm -rf public resources"
+  },
+  "keywords": ["hugo", "static-site", "music", "presskit", "techno", "electronic"],
+  "author": "Silent Souls",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "hugo": ">=0.104.0"
+  }
+}

@@ -1,0 +1,72 @@
+{{ define "main" }}
+<section class="music-page">
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">{{ .Title }}</h1>
+            <p class="page-subtitle">{{ .Params.subtitle | default "Our Musical Journey" }}</p>
+        </header>
+
+        <div class="music-content">
+            {{ .Content }}
+
+            <!-- SoundCloud Embeds Section -->
+            {{ if .Params.soundcloud_tracks }}
+            <div class="soundcloud-section">
+                <h2>Featured Tracks</h2>
+                <div class="soundcloud-grid">
+                    {{ range .Params.soundcloud_tracks }}
+                    <div class="soundcloud-embed">
+                        <h3>{{ .title }}</h3>
+                        <iframe
+                            width="100%"
+                            height="166"
+                            scrolling="no"
+                            frameborder="no"
+                            allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url={{ .url }}&color=%23{{ .Site.Params.accent_color | default "ff5500" }}&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+                        </iframe>
+                        {{ if .description }}
+                        <p class="track-description">{{ .description }}</p>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
+            <!-- Music Categories -->
+            <div class="music-categories">
+                <div class="category-card">
+                    <h3>Techno</h3>
+                    <p>Dark, driving beats that command the underground</p>
+                    <div class="genre-tags">
+                        <span class="tag">Industrial</span>
+                        <span class="tag">Minimal</span>
+                        <span class="tag">Hard</span>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <h3>Psytechno</h3>
+                    <p>Hypnotic journeys through psychedelic soundscapes</p>
+                    <div class="genre-tags">
+                        <span class="tag">Atmospheric</span>
+                        <span class="tag">Trippy</span>
+                        <span class="tag">Experimental</span>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <h3>Melodic Techno</h3>
+                    <p>Emotional depth meets electronic precision</p>
+                    <div class="genre-tags">
+                        <span class="tag">Progressive</span>
+                        <span class="tag">Cinematic</span>
+                        <span class="tag">Euphoric</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

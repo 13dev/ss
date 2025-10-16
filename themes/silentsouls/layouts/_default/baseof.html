@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}images/silent-souls-og.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/silent-souls-og.jpg">
+
+    <title>{{ .Title }}{{ if not .IsHome }} | {{ .Site.Title }}{{ end }}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+</head>
+<body class="dark-theme">
+    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+
+    <main id="main">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+
+    <!-- Analytics -->
+    {{ partial "analytics.html" . }}
+
+    <!-- Scripts -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

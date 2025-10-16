@@ -1,0 +1,24 @@
+baseURL = "https://silent-souls.com"
+languageCode = "en-us"
+title = "Silent Souls - Electronic Music Duo"
+theme = "silentsouls"
+
+[params]
+  description = "Silent Souls - DJ and Producer Duo specializing in Techno, Psytechno, and Melodic Techno"
+  author = "Silent Souls"
+
+  [params.analytics]
+    goatcounter = "silentsouls" # Your GoatCounter code (silentsouls.goatcounter.com)
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  writeStats = true
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false

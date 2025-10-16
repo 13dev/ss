@@ -1,0 +1,12 @@
+name = "silentsouls"
+license = "MIT"
+licenselink = "https://github.com/your-username/hugo-theme-silentsouls/blob/master/LICENSE"
+description = "A dark, mysterious theme for Silent Souls electronic music duo"
+homepage = "https://github.com/your-username/hugo-theme-silentsouls"
+tags = ["dark", "music", "electronic", "minimal", "modern"]
+features = ["responsive", "dark-mode", "soundcloud"]
+min_version = "0.104.0"
+
+[author]
+  name = "Silent Souls Theme"
+  homepage = "https://silentsouls.com"
